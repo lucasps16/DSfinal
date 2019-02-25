@@ -11,11 +11,22 @@ package proyecto;
  */
 public class Proyecto {
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+       Evento e = new Evento("", 0, 0, 0, 0);
+       
+       e.createEvento();
+           
+       }
+        
+        
+        
+        
+        
+        
+        
+        
+        
     }
     
-}
+

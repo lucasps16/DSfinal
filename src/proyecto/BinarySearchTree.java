@@ -77,5 +77,46 @@ public class BinarySearchTree<AnyType extends Comparable<? super AnyType>> {
         return t;
     }
 
+    public boolean contains(AnyType x){
+        return contains(x,root);
+    }
+    
+    private boolean contains(AnyType x, BinaryNode<AnyType> t){
+        if(t == null){
+            return false;
+        }
+        
+        int compare = x.compareTo(t.element);
+        if(compare < 0){
+            return contains(x, t.left);
+        } else if(compare>0){
+            return contains (x,t.right);
+        }else{
+            return true;
+        }
+        
+    }
+    
+    
+    public void printTree(BinaryNode<AnyType> t){
+        if(t!=null){
+            printTree(t.left);
+            System.out.println(t.element);
+            printTree(t.right);
+        }
+    }
+    
+    
+    private int height(BinaryNode<AnyType> t){
+        if(t== null){
+            return -1;
+        } else{
+            return 1 + Math.max(height(t.left),height(t.right));
+        }
+    }
+        
+    
+    
+    
     
 }

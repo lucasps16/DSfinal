@@ -9,7 +9,7 @@ package proyecto;
  *
  * @author luckm
  */
-public class Boletas {
+public class Boletas implements Comparable<Boletas> {
     
     public String evento;
     public int id;
@@ -77,6 +77,22 @@ public class Boletas {
         //Agrega la boleta a la lista de boletas vendidas
         
         return b;
+    }
+
+    
+    @Override
+    public int compareTo(Boletas o) {
+        
+        if (this.id > o.id){
+            return 1;
+        }else if(this.id< o.id){
+            return -1;
+        }else{
+            return 0;
+        }
+        
+        
+        
     }
     
     
