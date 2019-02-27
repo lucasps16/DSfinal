@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package proyecto;
+package datas;
+
+import proyecto.*;
 
 /**
  *
@@ -13,10 +15,10 @@ public class StackList<E> {
 
     public int size;
     private E[] sequence = (E[]) new Object[10];
-    MyArrayList<E> stack = null;
+    ArrayList<E> stack = null;
 
     public StackList() {
-        stack = new MyArrayList<>();
+        stack = new ArrayList<>();
     }
 
     public void push(E element) {

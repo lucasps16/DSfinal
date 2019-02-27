@@ -3,19 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package proyecto;
+package data;
+
+import proyecto.*;
 
 /**
  *
  * @author luckm
+ * @param <E>
  */
-public class Proyecto {
-
-    public static void main(String[] args) {
-        Evento e = new Evento("", 0, 0, 0, 0);
-
-        e.createEvento();
-
-    }
-
+public class Comando<E> {
+    
+    public E tipo;
+    public StackList<E> historial = new StackList<>();
+    
+    
 }

@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package proyecto;
+package data;
 
+import proyecto.*;
 import java.util.Scanner;
 
 /**
@@ -13,11 +14,51 @@ import java.util.Scanner;
  */
 public class Evento {
 
-    String name;
-    int month;
-    int day;
-    int year;
-    int nBoletas;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getMonth() {
+        return month;
+    }
+
+    public void setMonth(int month) {
+        this.month = month;
+    }
+
+    public int getDay() {
+        return day;
+    }
+
+    public void setDay(int day) {
+        this.day = day;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public int getnBoletas() {
+        return nBoletas;
+    }
+
+    public void setnBoletas(int nBoletas) {
+        this.nBoletas = nBoletas;
+    }
+
+    private String name;
+    private int month;
+    private int day;
+    private int year;
+    private int nBoletas;
     Scanner sc = new Scanner(System.in);
 
     public Evento(String name, int year, int month, int day, int nBoletas) {

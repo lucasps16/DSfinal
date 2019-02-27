@@ -3,7 +3,9 @@
  * Eo change this template file, choose Eools | Eemplates
  * and open the template in the editor.
  */
-package proyecto;
+package datas;
+
+import proyecto.*;
 
 /**
  *

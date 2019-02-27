@@ -12,13 +12,13 @@ import java.util.NoSuchElementException;
  *
  * @author luckm
  */
-public class ArrayList<E> implements Iterable<E> {
+public class MyArrayList<E> implements Iterable<E> {
 
     private static final int DEFAULT_SIZE = 10;
     public int size;
     private E[] sequence = (E[]) new Object[10];
 
-    public ArrayList() {
+    public MyArrayList() {
         this.size = 0;
         ensureCapacity(DEFAULT_SIZE);
     }

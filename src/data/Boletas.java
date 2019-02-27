@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package proyecto;
+package data;
+
+import proyecto.*;
 
 /**
  *
@@ -11,8 +13,11 @@ package proyecto;
  */
 public class Boletas implements Comparable<Boletas> {
 
-    public String evento;
-    public int id;
+    private String evento;
+    private int id;
+    private int precio;
+    private int silla;
+    private char fila;
 
     public Boletas(String evento, int id, int precio, char fila, int silla) {
         this.evento = evento;
@@ -25,9 +30,7 @@ public class Boletas implements Comparable<Boletas> {
     public Boletas() {
     }
 
-    public int precio;
-    public char fila;
-    public int silla;
+   
 
     public String getEvento() {
         return evento;
