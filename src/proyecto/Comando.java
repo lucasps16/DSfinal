@@ -57,7 +57,7 @@ public class Comando<E> {
     }
     
     public void deleteCmd(Comando c){
-        
+        stackCmd.pop(c);
         
     }
     
