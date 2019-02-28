@@ -66,6 +66,9 @@ public class Evento {
             case 1:
                 Evento newEvento = new Evento(n, y, m, d, b);
                 System.out.println("Evento creado!");
+                c = new Comando(false,newEvento, null);
+                c.addCmd(c);
+                addEvento(newEvento);
                 return newEvento;
             case 2:
                 return createEvento();
@@ -78,15 +81,17 @@ public class Evento {
      MyArrayList<Evento> listaEventos = new MyArrayList<>();
       Evento filarmonica = new Evento("Filarmonica de Bogotá", 2019, 4, 1, 200);
         Evento congresoFis = new Evento("Congreso de Fisica", 2019, 5, 14, 100);
+        int arraySize = 0;
     private void pre_added(){
        listaEventos.add(0, filarmonica);
         listaEventos.add(1,congresoFis);
+        arraySize = 1;
        
     }
 
     public void verEventos() {
-        pre_added();
-        
+        listaEventos.add(arraySize+1, e);
+        arraySize++;
     }
 
 }
